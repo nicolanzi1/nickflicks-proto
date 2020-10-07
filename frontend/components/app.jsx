@@ -12,22 +12,24 @@ import GreetingContainer from './greeting/greeting_container';
 import SignUpFormContainer from './session_form/signup_form_container';
 import LogInFormContainer from './session_form/login_form_container';
 import requests from '../util/requests_util'
+import Navbar from './navbar/navbar';
 import Banner from './banner/banner';
 import Row from './rows/row';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 
 const App = () => (
     <div className="app">
-        <header>
+        {/* <header>
             <Link to="/" className="header-link">
                 <h1>Nickflicks</h1>
             </Link>
             <GreetingContainer />
-        </header>
-        <Switch>
+        </header> */}
+        {/* <Switch>
             <AuthRoute exact path="/login" component={LogInFormContainer} />
             <AuthRoute exact path="/signup" component={SignUpFormContainer} />
-        </Switch>
+        </Switch> */}
+        <Navbar />
         <Banner />
         <Row
             title="NICKFLICKS ORIGINALS"
