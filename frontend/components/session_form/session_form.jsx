@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import background from '../../../app/assets/images/background.png'
 
 class SessionForm extends Component {
     constructor(props) {
@@ -36,27 +37,35 @@ class SessionForm extends Component {
 
     render() {
         return (
-            <div className="login-form-container">
+            <div className="login-form-container"
+                style={{
+                    backgroundImage: `url(${background})`,
+                    height: "715px"
+                }}
+            >
                 <form onSubmit={this.handleSubmit} className="login-form-box">
-                    Welcome to Nickflicks!
+                    Sign In
+                    <br/>
                     <br/>
                     Please {this.props.formType} or {this.props.navLink}
                     {this.renderErrors()}
                     <div className="login-form">
                         <br/>
-                        <label>Username:
+                        <label>
                             <input type="text"
                                 value={this.state.username}
                                 onChange={this.update('username')}
                                 className="login-input"
+                                placeholder="Email or phone number"
                             />
                         </label>
                         <br/>
-                        <label>Password:
+                        <label>
                             <input type="password"
                                 value={this.state.password}
                                 onChange={this.update('password')}
                                 className="login-input"
+                                placeholder="Password"
                             />
                         </label>
                         <br/>
